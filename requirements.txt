@@ -9,4 +9,6 @@ gensim
 config-box
 pyYAML
 ensure
+BeautifulSoup4
+lxml
 -e .
