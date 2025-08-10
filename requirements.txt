@@ -9,3 +9,4 @@ gensim
 config-box
 pyYAML
 ensure
+-e .

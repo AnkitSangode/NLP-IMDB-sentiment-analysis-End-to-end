@@ -1,7 +1,7 @@
 import os
 from box.exceptions import BoxValueError
 import yaml
-from sentiment_analysis.logger import logger
+from sentiment_analysis.logger.logger_setup import logger
 import json
 import joblib
 from ensure import ensure_annotations
@@ -9,6 +9,8 @@ from box import ConfigBox
 from pathlib import Path
 from typing import Any
 import base64
+from sentiment_analysis.exception.customException import CustomException
+import sys
 
 
 @ensure_annotations
@@ -21,7 +23,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
     except BoxValueError:
         raise ValueError('Yaml file is empty')
     except Exception as e:
-        raise e
+        raise CustomException(e,sys)
     
 @ensure_annotations
 def create_directories(path_to_directories:list , verbose=True):
