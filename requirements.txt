@@ -6,9 +6,8 @@ scikit-learn
 nltk
 spacy
 gensim
-config-box
+python-box
 pyYAML
 ensure
 BeautifulSoup4
-lxml
 -e .
